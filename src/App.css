@@ -9,6 +9,7 @@ body {
     height: 100vh;
     background-color: #0B2434;
     font-family: Karla, sans-serif;
+    text-align: center;
 }
 
 .container {
@@ -17,8 +18,18 @@ body {
     height: 320px;
     padding: 33px;
     border-radius: 10px;
-    display: grid;
-    place-items: center;
+}
+
+.title {
+    font-size: 26px;
+    color: #2B283A;
+    margin: 0;
+}
+
+.description {
+    color: #4A4E74;
+    font-size: 13px;
+    font-family: Inter, sans-serif;
 }
 
 .dice {
@@ -26,6 +37,7 @@ body {
     grid-template-columns: repeat(5, 35px);
     grid-gap: 20px;
     grid-template-rows: repeat(2, 35px);
+    margin-top: 20px;
 }
 
 .die {
@@ -59,4 +71,5 @@ body {
     color: white;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 20px;
 }
