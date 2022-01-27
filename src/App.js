@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Dice from "./components/Dice";
+import Die from "./components/Die";
+import {useState} from "react";
 
 function App() {
+    const [dice, setDice] = useState(allNewDice)
+    const allDice = dice.map((die, index) => <Die key={index} value={die}/>)
+    
+    function allNewDice() {
+        let newDice = [];
+        for (let i = 1; i <= 10; i++) {
+            let randomNumber = Math.floor((Math.random() * 6) + 1);
+            newDice.push(randomNumber);
+        }
+        return newDice;
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <main className='container'>
+          <Dice>
+              {allDice}
+          </Dice>
+      </main>
   );
 }
 
