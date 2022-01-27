@@ -36,11 +36,16 @@ body {
     border: none;
     border-radius: 4px;
     text-align: center;
+    font-family: Karla, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 24px;
     cursor: pointer;
+}
+
+.die.held {
+    background-color: #59E391;
 }
 
 .roll-dice {
